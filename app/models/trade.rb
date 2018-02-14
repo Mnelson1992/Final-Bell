@@ -1,4 +1,4 @@
 class Trade < ApplicationRecord
-  belongs_to :user
-  belongs_to :position
+  belongs_to :user, required: false
+  belongs_to :position, required: false
 end

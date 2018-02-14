@@ -10,7 +10,11 @@ class TradesController < ApplicationController
       redirect_to trade_path(@trade)
     else
       render :new
-    end 
+    end
+  end
+
+  def show
+    @trade = Trade.find(params[:id])
   end
 
 
