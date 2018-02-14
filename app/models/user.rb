@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :trades
   has_many :positions, through: :trades
-end
+
+  List what the user actually owns, build an instance method on User called
+  owned_positions that goes through trades and aggregates the quantity for each position
