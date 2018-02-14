@@ -1,0 +1,16 @@
+<h1> Enter your trade</h1>
+<h2>Please enter the ticker, quanitity of the trade and price of the trade</h2>
+
+<%= form_for @trade do |f| %>
+  <%=f.label :ticker, "Ticker:" %>
+  <%=f.text_field :ticker%>
+  <br>
+  <%=f.label :quantity, "Quantity:" %>
+  <%=f.number_field :quantity%>
+  <br>
+  <%=f.label :price, "Price:" %>
+  <%=f.number_field :price %>
+  <br>
+  <%=f.submit "Process Trade" %>
+
+<%end%>
