@@ -1,3 +1,7 @@
 <h1> Here is the confirmation of your trade(s) </h1>
 
-<h3>Bought <%= @trade.quantity%> shares of <%= @trade.ticker%> @ $<%= @trade.price%>
+<h3>Bought <%= @trade.quantity%> shares of <%= @trade.ticker%> @ $<%= @trade.price%></h3>
+
+<%=link_to "All Confirmations", trades_path %>
+
+<%#I want to add a link_to for the ticker to link to the users postions of that particular ticker%>

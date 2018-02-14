@@ -1,0 +1,6 @@
+<h1> Here are all of your trade confirmations </h1>
+<ul>
+<% @trades.each do |trade| %>
+    <li><h3> Bought <%= trade.quantity%> shares of <%= trade.ticker%> @ $<%= trade.price%></h3></li>
+<%end%>
+</ul>

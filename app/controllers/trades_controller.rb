@@ -17,6 +17,10 @@ class TradesController < ApplicationController
     @trade = Trade.find(params[:id])
   end
 
+  def index
+    @trades = Trade.all
+  end
+
 
 
 
