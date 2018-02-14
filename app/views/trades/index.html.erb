@@ -1,6 +1,7 @@
 <h1> Here are all of your trade confirmations </h1>
 <ul>
 <% @trades.each do |trade| %>
-    <li><h3> Bought <%= trade.quantity%> shares of <%= trade.ticker%> @ $<%= trade.price%></h3></li>
+    <li><h3> Bought <%= trade.quantity%> shares of <%=link_to trade.ticker, trade_path(trade)%> @ $<%= trade.price%></h3></li>
+    <%=button_to "Delete confirmation", trade_path(trade), :method => "delete"%>
 <%end%>
 </ul>

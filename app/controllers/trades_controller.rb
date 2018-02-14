@@ -21,7 +21,11 @@ class TradesController < ApplicationController
     @trades = Trade.all
   end
 
-
+  def destroy
+    @trade = Trade.find(params[:id])
+    @trade.delete
+    redirect_to trades_path
+  end
 
 
   private
