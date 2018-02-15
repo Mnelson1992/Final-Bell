@@ -5,11 +5,9 @@ class TradesController < ApplicationController
   end
 
   def create
-    @position = Position.find(params[:id])
     @trade = Trade.new(trade_params)
     if @trade.save
-      position[:id] = @trade.position_id
-      redirect_to position_path(@position)
+      redirect_to trade_path(@trade)
     else
       render :new
     end
@@ -33,7 +31,7 @@ class TradesController < ApplicationController
   private
 
   def trade_params
-    params.require(:trade).permit(:ticker, :quantity, :price)
+    params.require(:trade).permit(:ticker, :quantity, :price, :position_id)
   end
 
 

@@ -3,7 +3,8 @@
 
 <%= form_for @trade do |f| %>
   <%=f.label :ticker, "Ticker:" %>
-  <%=f.text_field :ticker%>
+  <%=f.collection_select :position, Position.all, :id, :ticker, include_blank: true %>
+
   <br>
   <%=f.label :quantity, "Quantity:" %>
   <%=f.number_field :quantity%>
